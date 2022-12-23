@@ -16,7 +16,7 @@ class Contenedor {
 
             const dataToJson = JSON.parse( data );
 
-            dataToJson.push( object );
+            dataToJson.mensajes.push( object );
 
             await fs.promises.writeFile( `./${this.archivo}`, JSON.stringify( dataToJson, null, 2 ) );
 
@@ -40,7 +40,7 @@ class Contenedor {
 
             const dataToJson = JSON.parse( data );
 
-            dataToJson.forEach(element => {
+            dataToJson.mensajes.forEach(element => {
                 
                 array.push( element );
 
@@ -55,6 +55,34 @@ class Contenedor {
         }
 
     }
+
+    print( objeto ) {
+
+        return util.inspect( objeto, false, 12, true );
+    
+    }
+
+    normalize() {
+
+        const authorSchema = new schema.Entity( 'author', {}, { idAttribute: 'email' } );
+
+        const empresaSchema = new schema.Entity( 'empresa', {
+
+            gerente: empleadoSchema,
+            encargado: empleadoSchema,
+            empleados: [ empleadoSchema ]
+
+        } );
+
+        const empresasSchema = new schema.Entity( 'empresas', {
+
+            empresas: [ empresaSchema ]
+
+        } )
+
+    }
+
+
 
 }
 

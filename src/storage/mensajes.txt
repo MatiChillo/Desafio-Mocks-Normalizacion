@@ -1,13 +1,27 @@
-[
-  {
-    "author": {
-      "id": "chillo.matias@gmail.com",
-      "nombre": "Matias",
-      "apellido": "Chillo",
-      "edad": "309",
-      "alias": "asd",
-      "avatar": "s"
+{
+  "id": "77",
+  "mensajes": [
+    {
+      "author": {
+        "id": "chillo.matias@gmail.com",
+        "nombre": "Matias",
+        "apellido": "Chillo",
+        "edad": "309",
+        "alias": "asd",
+        "avatar": "s"
+      },
+      "message": "s"
     },
-    "message": "s"
-  }
-]
+    {
+      "author": {
+        "id": "chillo.matias@gmail.com",
+        "nombre": "Matias",
+        "apellido": "Chillo",
+        "edad": "21",
+        "alias": "sad",
+        "avatar": "12"
+      },
+      "message": "12"
+    }
+  ]
+}
